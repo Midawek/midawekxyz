@@ -39,6 +39,10 @@
             width: 100%;
             height: 100%;
         }
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
         .wave {
             position: absolute;
             width: 140%;
@@ -49,6 +53,7 @@
             background: linear-gradient(744deg, #16437E, #5A90BE 60%, #9ECEF1);
             border-radius: 40%;
             animation: wave 55s infinite linear;
+            z-index: 1;
         }
         @keyframes wave {
             0% { transform: rotate(0deg); }
@@ -108,10 +113,12 @@
                             <div class="wave"></div>
                             <div class="wave" style="animation-duration: 50s;"></div>
                             <div class="wave" style="animation-duration: 45s;"></div>
-                            <img src="DFythfw.webp" alt="pfp" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
-                            <h2 class="card-title">Midawek</h2>
-                            <p class="card-text">Beginner Developer in Luau and HTML&CSS/Graphic Designer</p>
-                            <p class="card-text">Professional Dumbass</p>
+                            <div class="card-content">
+                                <img src="DFythfw.webp" alt="pfp" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h2 class="card-title">Midawek</h2>
+                                <p class="card-text">Beginner Developer in Luau and HTML&CSS/Graphic Designer</p>
+                                <p class="card-text">Professional Dumbass</p>
+                            </div>
                         </div>
                     </div>
                 </div>
