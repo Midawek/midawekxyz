@@ -1,4 +1,4 @@
-# AzerothJS
+# AzerothJS --- Used by Midawek.pl Blog
 
 AzerothJS is an open source blog engine running on static file servers such as Github Pages or any web hosting. 
 
