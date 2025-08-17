@@ -1,6 +1,6 @@
 ![Logo](https://raw.githubusercontent.com/Midawek/midawekpl/refs/heads/main/icon.ico)
 
-# Midawek.pl website
+# Midawek.xyz website
 
 A personal project that I do amongst the other things I program.
 
