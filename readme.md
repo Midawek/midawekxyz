@@ -2,9 +2,9 @@
 
 # Midawek.xyz website
 
-A personal project that I do amongst the other things I program.
+A personal project that I do amongst the other things I do.
 
-As of me, I mainly program on Luau (Roblox Studio).
+As of me, I do random shit and see what sticks.
 ## Contributing
 
 Feel free to make an issue if you found anything wrong with my site.
