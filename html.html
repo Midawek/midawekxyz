@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midawek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --fg: #f0f0f0;
+      --accent: #ff8c00;
+      --card-bg: #1a1a1a;
+      --card-hover: #252525;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      background: linear-gradient(135deg, var(--bg) 0%, #151515 100%);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      display: flex; flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    header { 
+      text-align: center; 
+      margin: 4rem 0 2rem;
+      animation: fadeIn 1s ease;
+    }
+    header h1 { 
+      font-size: 7rem; 
+      color: var(--accent);
+      text-shadow: 0 0 10px rgba(255,140,0,0.3);
+      margin-bottom: 0.5rem;
+      font-family: 'Jersey 25 Charted', sans-serif;
+      letter-spacing: 1px;
+    }
+    header p { 
+      color: #bbb; 
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+    .emoji { 
+      font-size: 2.5rem; 
+      margin: 1rem 0;
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+    .social-links a {
+      color: var(--fg);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* Filter tabs */
+    .tabs { 
+      display: flex; 
+      gap: 1rem; 
+      margin: 3rem 0; 
+      flex-wrap: wrap; 
+      justify-content: center;
+    }
+    .tab { 
+      cursor: pointer; 
+      padding: 0.6rem 1.5rem; 
+      border-radius: 50px; 
+      background: var(--card-bg); 
+      transition: all 0.3s ease;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .tab.active, .tab:hover { 
+      background: var(--accent); 
+      color: #111;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,140,0,0.3);
+    }
+
+    .project-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1rem; width:90%; max-width:900px; }
+
+    .project { 
+      background: var(--card-bg); 
+      padding:1.5rem; 
+      border-radius:12px; 
+      text-align:center; 
+      transition: all 0.3s ease;
+      border: 1px solid #252525;
+    }
+    .project:hover { 
+      transform: translateY(-8px); 
+      background: var(--card-hover);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
+      border-color: var(--accent);
+    }
+    .project img { 
+      width:100%; 
+      border-radius:8px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .project:hover img {
+      transform: scale(1.02);
+    }
+    .project h3 { 
+      margin: 1rem 0 0.5rem; 
+      font-size:1.2rem; 
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .prompt { 
+      margin: 3rem; 
+      font-style: italic; 
+      color: #bbb;
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+    footer { 
+      margin: 3rem 0; 
+      font-size: 1rem; 
+      color: #888;
+      text-align: center;
+    }
+    a { color: var(--accent); text-decoration:none; }
+    a:hover { opacity: 0.8; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .project {
+      animation: fadeIn 0.6s ease forwards;
+      opacity: 0;
+    }
+    .project:nth-child(1) { animation-delay: 0.1s; }
+    .project:nth-child(2) { animation-delay: 0.2s; }
+    .project:nth-child(3) { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Midawek</h1>
+    <p>I make gmod and roblox shit</p>
+    <div class="emoji">龴ↀ◡ↀ龴✿</div>
+    <div class="social-links">
+      <a href="https://github.com/Midawek" aria-label="GitHub"><i class="fa-brands fa fa-square-github"></i></a>
+      <a href="https://steamcommunity.com/id/midawek/" aria-label="Steam"><i class="fa-brands fa-square-steam"></i></a>
+      <a href="https://www.roblox.com/users/179911345/profile" aria-label="Roblox"><i class="fa-brands fa-roblox"></i></a>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-filter="all">All</div>
+    <div class="tab" data-filter="Roblox">Roblox</div>
+    <div class="tab" data-filter="Gmod">Gmod</div>
+  </div>
+
+  <div class="project-list"></div>
+
+  <div class="prompt">Thanks for visiting! Hope to see you again o(￣▽￣)ｄ</div>
+
+  <footer>
+    Made with JS & CSS • <a href="#">Source on GitHub</a>
+  </footer>
+
+  <script>
+    const projects = [
+      { 
+        title: "Untitled Vibe Game", 
+        thumb: "https://tr.rbxcdn.com/180DAY-8404bbe3f03d0690763c4b6a0f24e9ce/512/512/Image/Webp/noFilter", 
+        link:"https://www.roblox.com/games/138031786652349", 
+        cats:["Roblox"] 
+      },
+      { 
+        title: "[ARC9] Fuckstormpack - Stickers", 
+        thumb: "https://images.steamusercontent.com/ugc/13760113437035266145/3431903F29FD2A886934C3273D5E740CB335C012/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 
+        link:"https://steamcommunity.com/sharedfiles/filedetails/?id=3552450738", 
+        cats:["Gmod"] 
+      },
+      { 
+        title: "Nombat - Unforseen Consequences", 
+        thumb: "https://images.steamusercontent.com/ugc/11607306570536353504/1231CE21D202CF5677E405CDAD02BB850F5A9266/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 
+        link:"https://steamcommunity.com/sharedfiles/filedetails/?id=3552381541", 
+        cats:["Gmod"] 
+      },
+    ];
+
+    const projectList = document.querySelector('.project-list');
+    const tabs = document.querySelectorAll('.tab');
+
+    function render(filter){
+      projectList.innerHTML = '';
+      projects.filter(p => filter==='all' || p.cats.includes(filter))
+              .forEach(p => {
+        projectList.innerHTML += `
+          <div class="project">
+            <a href="${p.link}" target="_blank">
+              <img src="${p.thumb}" alt="${p.title}">
+              <h3>${p.title}</h3>
+            </a>
+          </div>`;
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        render(tab.getAttribute('data-filter'));
+      });
+    });
+
+    render('all');
+  </script>
+</body>
+</html>
