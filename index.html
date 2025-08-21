@@ -31,9 +31,30 @@
       scroll-behavior: smooth;
     }
     header { 
-      text-align: center; 
-      margin: 4rem 0 2rem;
+      margin: 3rem 0 2rem;
       animation: fadeIn 1s ease;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      box-shadow: 0 5px 15px rgba(255,140,0,0.3);
+    }
+    .profile-photo .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-info {
+      text-align: center;
     }
     header h1 { 
       font-size: 7rem; 
@@ -120,6 +141,52 @@
     .project:hover img {
       transform: scale(1.02);
     }
+    .tools-section {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 1s ease;
+    }
+    
+    .tools-section h2 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .eeee {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .tool {
+      background: var(--card-bg);
+      padding: 0.8rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .tool:hover {
+      background: var(--card-hover);
+      transform: translateY(-3px);
+    }
+    
+    .tool i {
+      color: var(--accent);
+    }
+    
     .project h3 { 
       margin: 1rem 0 0.5rem; 
       font-size:1.2rem; 
@@ -167,9 +234,17 @@
 </head>
 <body>
   <header>
-    <h1>Midawek</h1>
-    <p>I make gmod and roblox shit</p>
-    <div class="emoji">龴ↀ◡ↀ龴✿</div>
+    <div class="header-content">
+      <div class="profile-photo">
+        <!-- Replace with your actual photo path -->
+        <img src="https://avatars.fastly.steamstatic.com/bf6bb89e4d37f833c1d9199a41e47446bd169e64_full.jpg" alt="Midawek Profile Photo" class="photo">
+      </div>
+      <div class="profile-info">
+        <h1>Midawek</h1>
+        <p>I make gmod and roblox shit</p>
+        <div class="emoji">龴ↀ◡ↀ龴✿</div>
+      </div>
+    </div>
     <div class="social-links">
       <a href="https://github.com/Midawek" aria-label="GitHub"><i class="fa-brands fa fa-square-github"></i></a>
       <a href="https://steamcommunity.com/id/midawek/" aria-label="Steam"><i class="fa-brands fa-square-steam"></i></a>
@@ -177,13 +252,31 @@
     </div>
   </header>
 
+  <div class="tools-section">
+    <h2>Tools I Use :3</h2>
+    <div class="tools-grid">
+      <div class="tool"><i class="fas fa-code"></i> Sublime Text 4</div>
+      <div class="tool"><i class="fas fa-video"></i> OBS Studio</div>
+      <div class="tool"><i class="fas fa-image"></i> Photoshop 2022 (23.1.0)</div>
+      <div class="tool"><i class="fas fa-film"></i> Vegas Pro 18.0</div>
+      <div class="tool"><i class="fas fa-gamepad"></i> GMPublisher 2.11.0 </div>
+      <div class="tool"><i class="fas fa-cube"></i> Roblox Studio</div>
+      <div class="tool"><i class="fab fa-discord"></i> Discord</div>
+      <div class="tool"><i class="fas fa-code"></i> VSCode (roblox studio)</div>
+    </div>
+  </div>
+
   <div class="tabs">
     <div class="tab active" data-filter="all">All</div>
     <div class="tab" data-filter="Roblox">Roblox</div>
     <div class="tab" data-filter="Gmod">Gmod</div>
   </div>
 
-  <div class="project-list"></div>
+  <div> 
+    <h2 class="eeee">My projects :3</h2>
+  </div>
+
+    <div class="project-list"></div>
 
   <footer>
     Thanks for visiting! Hope to see you again o(￣▽￣)ｄ
